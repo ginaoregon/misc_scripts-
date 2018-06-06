@@ -1,0 +1,6 @@
+ggplot(data = mydataset, aes(x = xvariable, y = yvariable)) +
+    geom_point() +
+    geom_smooth(method = 'lm')
+
+# Fit a linear model
+summary( lm( yvariable ~ xvariable , data = mydataset))
