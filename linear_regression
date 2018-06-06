@@ -4,3 +4,14 @@ ggplot(data = mydataset, aes(x = xvariable, y = yvariable)) +
 
 # Fit a linear model
 summary( lm( yvariable ~ xvariable , data = mydataset))
+
+#multible-level data, first create different subsets of data according to different levels of catagorizations
+subset1 <- subset(mydataset, level="v1")
+
+
+##for using filter and select to subset
+library("dplyr")
+
+subset2 <- select(filter(mydataset, col2=="v2"), c(col2:4, col8))
+
+
